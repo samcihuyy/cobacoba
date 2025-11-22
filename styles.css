@@ -1,0 +1,136 @@
+:root {
+    --text : #000;
+    --bg : #fff;
+    --maxw : 1100px;
+}
+
+body {
+    margin: 0;
+    color: var(--text);
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bg);
+    line-height: 1.40;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+}
+
+.banner-wrap {
+    position: relative;
+    width: 100%;
+    height: 320px; /* supaya banner rapi */
+    overflow: visible;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.avatar {
+    position: absolute;
+    left: 50%;
+    bottom: -90px;      /* avatar keluar sedikit di bawah banner */
+    transform: translateX(-50%);
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--bg);
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+.avatar-inner {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatar-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 140px 20px 20px; /* tambahkan padding-top setara (≥ avatar height / 2 + some gap) */
+}
+
+.hoby {
+    margin-top: 40px;
+    
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.cards {
+    text-align: center;
+    padding: 12px;
+    background: #f4f4f4; /* bisa diganti warna lain */
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.cards:hover {
+    background: #e7e7e7; /* warna berubah saat hover */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.card text {
+    font-size: 14px;
+}
+
+.footer {
+    background: #000;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 60px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+.footer-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    text-align: center;
+    font-size: 22px;
+}
+
+@media (max-width: 700px) {
+    .banner-wrap { height: 220px; }
+    .avatar {
+        width: 120px;
+        height: 120px;
+        bottom: -60px;
+        border-width: 3px;
+    }
+    .container { padding-top: 100px; }
+}
